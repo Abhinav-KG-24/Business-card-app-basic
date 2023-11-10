@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,29 +16,24 @@ class Myapp extends StatelessWidget {
           backgroundColor: Colors.deepPurple,
           body: SafeArea(
               child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
-                color: Colors.white,
-                height: 100.0,
-                width: 100.0,
-                child: const Text('Hello world'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('Asset/images/Abhinav.jpg'),
               ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                color: Colors.blueAccent,
-                height: 100.0,
-                width: 100.0,
-                child: const Text('container 2'),
-              ),
-              Container(
-                color: Colors.redAccent,
-                height: 100.0,
-                width: 100.0,
-                child: const Text('container 3'),
-              )
+              Text('Abhinav KG',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Pacifico')),
+              SizedBox(height: 20.0),
+              Text('Flutter Developer',
+                  style: TextStyle(
+                      color: Colors.deepPurple.shade100,
+                      fontSize: 20.0,
+                      fontFamily: 'Agbalumo',
+                      fontWeight: FontWeight.bold))
             ],
           ))),
     );
